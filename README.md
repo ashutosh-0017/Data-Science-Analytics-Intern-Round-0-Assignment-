@@ -15,3 +15,9 @@ The goal is to uncover patterns that can inform sentiment-aware trading strategi
 pip install pandas numpy matplotlib
 
 
+1.Open notebook.ipynb
+
+2.Run all cells top to bottom
+
+3.Charts will be saved to /outputs
+
