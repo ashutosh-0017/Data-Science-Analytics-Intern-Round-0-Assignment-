@@ -1,0 +1,32 @@
+Trader Performance vs Market Sentiment
+
+(Hyperliquid × Fear & Greed Index)
+
+Methodology
+
+We analyzed Hyperliquid trade-level data and aligned it with the daily Fear & Greed Index to study how market sentiment relates to trader behavior and performance. Trade timestamps were converted from epoch milliseconds to calendar dates and aggregated at a daily trader level.
+
+We engineered key metrics capturing both performance and behavior, including: daily PnL, trades per day, average trade size, leverage usage, win-rate and drawdown proxies, and exposure/risk metrics such as PnL volatility and profit factor. The merged dataset was analyzed across sentiment regimes (Fear, Greed, Extreme Greed, Neutral). Traders were further segmented into high vs low leverage, frequent vs infrequent, and consistent vs inconsistent winners.
+
+Key Insights
+
+Performance is regime-dependent:
+Traders achieve the highest average daily PnL during Fear regimes, outperforming Greed and Neutral regimes. This suggests volatile, fearful market conditions create more profitable opportunities on average, likely due to stronger price dislocations and mean-reversion setups.
+
+Trader behavior shifts with sentiment:
+Trading activity (trades per day) peaks during Fear regimes, while leverage usage spikes during Greed and Extreme Greed regimes. However, higher leverage during euphoric markets does not translate into higher average PnL, indicating weaker risk-adjusted performance when traders increase leverage aggressively.
+
+Trader heterogeneity matters:
+High-leverage and historically consistent traders outperform on average, but only alongside significantly higher activity and win rates. Inconsistent traders underperform materially. This suggests leverage is beneficial primarily for skilled traders and should not be universally encouraged.
+
+Strategy Recommendations
+
+Fear Regimes (Volatility Playbook):
+Allow higher trade frequency but cap leverage (e.g., reduce max leverage by ~30–40%). Fear regimes offer strong opportunities without requiring extreme leverage, and leverage caps help control drawdowns.
+
+Greed / Extreme Greed Regimes (Leverage Discipline):
+Enforce stricter leverage limits for low win-rate traders. Allow higher leverage only for historically consistent traders. This mitigates poor risk-adjusted outcomes observed when leverage spikes during euphoric market phases.
+
+Limitations
+
+This analysis is based on aggregated daily PnL and does not account for transaction costs, slippage, or holding periods. Directional long/short labels were sparse in parts of the dataset, so directional bias results should be interpreted cautiously.
